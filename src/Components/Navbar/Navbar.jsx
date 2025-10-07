@@ -33,7 +33,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end ">
-                        <a className="btn text-white border none bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><FaGithub/> Contribute</a>
+                        <a href='https://github.com/onlyMazhar' target='_blank' className="btn text-white border none bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><FaGithub/> Contribute</a>
                     </div>
                 </div>
             </Container>
