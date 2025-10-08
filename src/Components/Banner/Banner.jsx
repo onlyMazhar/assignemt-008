@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '../Container/Container';
 
 const Banner = () => {
+    // console.log(adc)
     return (
         <div className=' bg-gradient-to-r from-[#632EE3] to-[#9F62F2] '>
             <Container>

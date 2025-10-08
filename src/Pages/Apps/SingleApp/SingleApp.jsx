@@ -10,7 +10,7 @@ const SingleApp = ({ app }) => {
         <>
             <Container>
                 <Link>
-                    <div className="transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4 h-full bg-base-100 xl:w-70 2xl:w-86 shadow-md mx-auto">
+                    <div className="transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4 h-full bg-base-100  shadow-md mx-auto">
                         <img
                             className='rounded-lg'
                             src={image}

@@ -2,9 +2,12 @@ import React from 'react';
 import App from './App';
 import Container from '../Container/Container';
 import { Link } from 'react-router';
+import useApps from '../../Hooks/useApps';
 
-const HomeApps = ({ data }) => {
-    console.log(data)
+const HomeApps = () => {
+    
+    const { apps } = useApps();
+    const halfApps = apps.slice(0, 8)
     return (
         <>
             <Container>
@@ -15,7 +18,7 @@ const HomeApps = ({ data }) => {
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2   xl:grid-cols-4 gap-8 p-8'>
                         {
-                            data.map(app => <App app={app}></App>)
+                            halfApps.map(app => <App key={app.id} app={app}></App>)
                         }
                     </div>
                     <Link to='/apps'>

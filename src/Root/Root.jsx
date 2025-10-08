@@ -6,9 +6,13 @@ import Footer from '../Components/Footer/Footer';
 const Root = () => {
     return (
         <>
-            <Navbar />
-            <Outlet />
-            <Footer />
+            <div className='flex flex-col min-h-screen'>
+                <Navbar />
+                <div className='flex-1'>
+                    <Outlet />
+                </div>
+                <Footer />
+            </div>
         </>
     );
 };

@@ -6,33 +6,38 @@ import Apps from '../Pages/Apps/Apps';
 import Installation from '../Pages/Installation/Installation';
 import Error from '../Components/Error/Error';
 import ErrorApp from '../Components/ErrorApp/ErrorApp';
+import AppsDetailes from '../Pages/AppsDetailes/AppsDetailes';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        errorElement: Error,
-        Component: Root,
+        element: <Root/>,
+        hydrateFallbackElement:<p>Loading...</p>,
+        errorElement: <Error/>,
         children: [
             {
                 index: true,
-                loader: () => fetch('/home.json'),
-                Component: Home
+                element: <Home/>
             },
             {
                 path: '/apps',
-                loader: () => fetch('/allApp.json'),
-                Component: Apps
+                element: <Apps/>
             },
             {
                 path: '/installation',
-                Component: Installation
-            }, {
-                path: '/*',
-                Component: Error,
+                element: <Installation/>
+            },
+            {
+                path:'/apps/:id',
+                element:<AppsDetailes/>
+            },
+            {
+                path: '*',
+                element: <Error/>,
             },
             {
                 path: '/apps/*',
-                Component: ErrorApp
+                element: ErrorApp
             }
         ]
     }

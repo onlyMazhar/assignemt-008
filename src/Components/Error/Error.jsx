@@ -1,15 +1,18 @@
 import React from 'react';
 import Container from '../Container/Container';
 import Err404 from '../../assets/error-404.png'
-import { useNavigate } from 'react-router';
+import { useNavigate, useRouteError } from 'react-router';
 
 const Error = () => {
     const navigate = useNavigate();
+    const error = useRouteError();
+
     return (
         <Container>
             <div className='text-center my-20'>
                 <div>
                     <img className='mx-auto' src={Err404} alt="Error 404 Image" />
+                    <h1>{error}</h1>
                 </div>
                 <div className='space-y-5 mt-15'>
                     <h3 className='text-5xl font-bold'>Oops, page not found!</h3>
