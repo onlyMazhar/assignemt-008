@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 import { Link } from 'react-router';
 
 const HomeApps = ({ data }) => {
-    // console.log(data)
+    console.log(data)
     return (
         <>
             <Container>
