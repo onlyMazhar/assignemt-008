@@ -26,7 +26,7 @@ const Navbar = () => {
                         <Link to='/' className="btn btn-ghost border-none text-xl font-bold  gradient-text"> <img className='w-8' src={logo} alt="" /> HERO.IO</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 space-x-15  ">
+                        <ul className="menu menu-horizontal px-1 space-x-15 font-bold ">
                             <NavLink to='/'>Home</NavLink>
                             <NavLink to='/apps'>Apps</NavLink>
                             <NavLink to='/installation'>Installation</NavLink>

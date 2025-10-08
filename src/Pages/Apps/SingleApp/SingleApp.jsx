@@ -1,15 +1,12 @@
 import React from 'react';
-import Container from '../Container/Container';
-import { TiStarFullOutline } from 'react-icons/ti';
-import { FaArrowDown } from 'react-icons/fa';
+import Container from '../../../Components/Container/Container';
 import { RxDownload } from 'react-icons/rx';
+import { TiStarFullOutline } from 'react-icons/ti';
 import { Link } from 'react-router';
 
-const App = ({ app }) => {
-    console.log(app)
+const SingleApp = ({ app }) => {
     const { downloads, title, ratingAvg, image,slogan } = app;
     return (
-
         <>
             <Container>
                 <Link>
@@ -32,4 +29,4 @@ const App = ({ app }) => {
     );
 };
 
-export default App;
+export default SingleApp;

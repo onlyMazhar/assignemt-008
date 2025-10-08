@@ -158,5 +158,165 @@
       { "name": "4 star", "count": 900000 },
       { "name": "5 star", "count": 3910000 }
     ]
+  },
+  {
+    "image": "https://i.ibb.co.com/WjrxKw4/Asana.jpg",
+    "title": "Asana",
+    "companyName": "Asana, Inc.",
+    "id": 9,
+    "slogan": "Work Tracker",
+    "description": "Work management and productivity app.",
+    "longDescription": "Asana makes it easy to manage tasks, projects, and workflows across your team. Visualize progress with timelines, boards, and calendars. Automate routine work to save time and boost productivity. With built-in collaboration features, everyone stays aligned on priorities. Simplify teamwork and focus on what matters most.",
+    "size": 125,
+    "reviews": 1300000,
+    "ratingAvg": 4.6,
+    "downloads": 20,
+    "ratings": [
+      { "name": "1 star", "count": 10000 },
+      { "name": "2 star", "count": 8000 },
+      { "name": "3 star", "count": 30000 },
+      { "name": "4 star", "count": 250000 },
+      { "name": "5 star", "count": 1000000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/W40c95nm/Zoom.jpg",
+    "title": "Zoom",
+    "companyName": "Zoom Video Communications",
+    "id": 10,
+    "slogan": "Virtual Meetings",
+    "description": "Video meetings and online collaboration.",
+    "longDescription": "Zoom helps you connect with others through high-quality video and audio meetings. Host webinars, virtual classrooms, or team calls with ease. Share your screen, chat, and collaborate in real time. Simple to use and trusted by millions of professionals worldwide. Wherever you work or study, Zoom keeps you connected.",
+    "size": 180,
+    "reviews": 9000000,
+    "ratingAvg": 4.5,
+    "downloads": 500,
+    "ratings": [
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 90000 },
+      { "name": "3 star", "count": 250000 },
+      { "name": "4 star", "count": 1500000 },
+      { "name": "5 star", "count": 7550000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/7Mw5MmS/Dropbox.jpg",
+    "title": "Dropbox",
+    "companyName": "Dropbox, Inc.",
+    "id": 11,
+    "slogan": "File Keeper",
+    "description": "Cloud storage and file sharing app.",
+    "longDescription": "Dropbox makes it easy to back up, share, and access your files from anywhere. Work on projects with others and keep everything in sync. Share large files securely with a simple link. Protect your data with automatic backup and smart version history. Simplify your workflow and stay organized effortlessly.",
+    "size": 170,
+    "reviews": 4500000,
+    "ratingAvg": 4.6,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 40000 },
+      { "name": "2 star", "count": 30000 },
+      { "name": "3 star", "count": 80000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 3850000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/zHByWqV7/Forest.jpg",
+    "title": "Forest",
+    "companyName": "SeekrTech",
+    "id": 12,
+    "slogan": "Focus Grower",
+    "description": "Focus and productivity timer app.",
+    "longDescription": "Forest helps you stay focused by planting virtual trees as you work. The longer you focus, the more your forest grows. Disconnect from distractions and build better habits. Earn rewards, unlock tree species, and track your progress. Stay mindful, motivated, and productive — one tree at a time.",
+    "size": 85,
+    "reviews": 2200000,
+    "ratingAvg": 4.8,
+    "downloads": 20,
+    "ratings": [
+      { "name": "1 star", "count": 10000 },
+      { "name": "2 star", "count": 8000 },
+      { "name": "3 star", "count": 30000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 582000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/GQDWHphV/Canva.jpg",
+    "title": "Canva",
+    "companyName": "Canva Pty Ltd",
+    "id": 13,
+    "slogan": "Design Simplified",
+    "description": "Graphic design and content creation tool.",
+    "longDescription": "Canva helps you design anything with ease — from presentations and posters to social media posts. Choose from thousands of templates and customize them instantly. Collaborate with your team in real time and export in any format. No design skills needed — just drag, drop, and create. Canva makes visual communication effortless and fun.",
+    "size": 200,
+    "reviews": 10000000,
+    "ratingAvg": 4.8,
+    "downloads": 200,
+    "ratings": [
+      { "name": "1 star", "count": 90000 },
+      { "name": "2 star", "count": 60000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 1200000 },
+      { "name": "5 star", "count": 8650000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/WpRWVzvQ/Grammarly_Keyboard.jpg",
+    "title": "Grammarly Keyboard",
+    "companyName": "Grammarly, Inc.",
+    "id": 14,
+    "slogan": "Write Better",
+    "description": "AI-powered writing and grammar assistant.",
+    "longDescription": "Grammarly helps you write with confidence wherever you type. It checks grammar, spelling, and clarity instantly. Get suggestions to improve tone, vocabulary, and readability. Whether writing emails, essays, or messages, Grammarly ensures your words make the right impact. Communicate clearly and professionally every time.",
+    "size": 95,
+    "reviews": 6500000,
+    "ratingAvg": 4.7,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 40000 },
+      { "name": "3 star", "count": 100000 },
+      { "name": "4 star", "count": 800000 },
+      { "name": "5 star", "count": 5460000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/FqXVcGpT/Clockify.jpg",
+    "title": "Clockify",
+    "companyName": "COING Inc.",
+    "id": 15,
+    "slogan": "Time Tracker",
+    "description": "Time tracking and productivity tracker.",
+    "longDescription": "Clockify helps you track work hours across projects and tasks with ease. Start and stop timers to measure productivity accurately. Generate reports and analyze where your time goes. Ideal for freelancers and teams managing billable hours. Stay efficient, organized, and aware of your time like never before.",
+    "size": 60,
+    "reviews": 700000,
+    "ratingAvg": 4.6,
+    "downloads": 10,
+    "ratings": [
+      { "name": "1 star", "count": 5000 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 10000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 582000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/xq30hpyM/notion.jpg",
+    "title": "Notion",
+    "companyName": "Notion Labs, Inc.",
+    "id": 16,
+    "slogan": "Second Brain",
+    "description": "All-in-one workspace for notes, tasks, and projects.",
+    "longDescription": "Notion is the ultimate workspace that lets you write, plan, and organize everything in one place. Combine notes, to-do lists, databases, and calendars effortlessly. Collaborate with your team in real time and stay productive anywhere. With flexible templates and powerful integrations, Notion adapts to your workflow. Turn ideas into action and make",
+    "size": 130,
+    "reviews": 1500000,
+    "ratingAvg": 4.8,
+    "downloads": 35,
+    "ratings": [
+      { "name": "1 star", "count": 15000 },
+      { "name": "2 star", "count": 10000 },
+      { "name": "3 star", "count": 40000 },
+      { "name": "4 star", "count": 250000 },
+      { "name": "5 star", "count": 1225000 }
+    ]
   }
 ]

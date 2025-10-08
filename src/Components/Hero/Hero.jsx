@@ -11,7 +11,7 @@ const Hero = () => {
         <div>
             <Container>
                 <div className='text-center w-full md:w-6/12 mx-auto mt-8 md:mt-16'>
-                    <h1 className='px-2  text-5xl md:text-8xl font-extrabold banner-font text-[#001931] '>We Build <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]'>Productive</span> Apps</h1>
+                    <h1 className='px-2  text-5xl md:text-7xl 2xl:text-8xl font-extrabold banner-font text-[#001931] '>We Build <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]'>Productive</span> Apps</h1>
                     <p className='text-[#627382] text-sm md:text-xl max-w-[620px] mx-auto my-4   px-2'>
                         At HERO.IO , we craft innovative apps designed to make everyday life simpler,
                         smarter, and more exciting. Our goal is to turn your ideas into digital experiences
