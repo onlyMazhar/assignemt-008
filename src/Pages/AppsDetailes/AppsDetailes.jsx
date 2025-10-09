@@ -10,13 +10,13 @@ import Swal from 'sweetalert2';
 
 const AppsDetailes = () => {
     const [install, setInstall] = useState(false) // to toggle between installed/uninstall 
-    const { apps, loading, error } = useApps() // custom hook
+    const { apps, loading  } = useApps() // custom hook
     // console.log(apps)
     const { id } = useParams();
 
     const selectedApp = apps.find(a => a.id === Number(id)) // getting single app data using app ID
     if (loading) return (<p>Loading...</p>)
-    const { title, slogan, downloads, size, reviews, description, ratings, ratingAvg, image, companyName } = selectedApp;
+    const { title, slogan, downloads, size, reviews, description,   ratingAvg, image, companyName } = selectedApp;
 
     // function to add data in locatlstorage 
     const handleInstall = () => {
@@ -27,19 +27,25 @@ const AppsDetailes = () => {
         let updatelist = [];
 
         if (addedtoLocal) {
+            // check if app data alreday added in localStorage
             const isExist = addedtoLocal.some(a => a.id === selectedApp.id)
-            if (isExist) {
+
+            if (isExist) { // sweet aleart will return if app data exist
                 return Swal.fire({
                     icon: "error",
                     title: "Already Installed "
                 })
-            } else { updatelist = [...addedtoLocal, selectedApp] }
-        } else {
+            }// else app data will be added in updated liset
+            else { updatelist = [...addedtoLocal, selectedApp] }
+
+        } else { // if no app dada exist set this as first app data
             updatelist.push(selectedApp)
         }
+
+        // add to local storage and convert to json string fro js array
         localStorage.setItem('installed', JSON.stringify(updatelist))
 
-
+        
         !install && Swal.fire({ //
             title: "Successfully Installed",
             icon: "success",
@@ -101,7 +107,7 @@ const AppsDetailes = () => {
 
                 <div className='w-10/12 mx-auto py-10  text-justify leading-7 space-y-3'>
                     <p className='font-bold text-lg'>Discription</p>
-                    <p className='text-[#627382] '>  {description}</p>
+                    <p className='text-[#627382] '>{description}</p>
                 </div>
 
             </Container>
