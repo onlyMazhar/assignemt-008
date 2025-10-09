@@ -9,33 +9,43 @@ import Swal from 'sweetalert2';
 
 
 const AppsDetailes = () => {
-    const [install, setInstall] = useState(false)
-
-
-    const { apps, loading, error } = useApps()
+    const [install, setInstall] = useState(false) // to toggle between installed/uninstall 
+    const { apps, loading, error } = useApps() // custom hook
     // console.log(apps)
-
     const { id } = useParams();
 
-
-    const selectedApp = apps.find(a => a.id === Number(id))
-
+    const selectedApp = apps.find(a => a.id === Number(id)) // getting single app data using app ID
     if (loading) return (<p>Loading...</p>)
-
     const { title, slogan, downloads, size, reviews, description, ratings, ratingAvg, image, companyName } = selectedApp;
 
+    // function to add data in locatlstorage 
     const handleInstall = () => {
-        setInstall(true)
+        // get added items from local storage and convert thme from string to normal data
+        const addedtoLocal = JSON.parse(localStorage.getItem('installed'));
 
-        install
-            ? Swal.fire({
-                icon: "error",
-                title: "Already Installed "})
-            : Swal.fire({
-                title: "Successfully Installed",
-                icon: "success",
-                draggable: true
-                });
+        // as we will update all data in a array so updated list is declieared an empty array
+        let updatelist = [];
+
+        if (addedtoLocal) {
+            const isExist = addedtoLocal.some(a => a.id === selectedApp.id)
+            if (isExist) {
+                return Swal.fire({
+                    icon: "error",
+                    title: "Already Installed "
+                })
+            } else { updatelist = [...addedtoLocal, selectedApp] }
+        } else {
+            updatelist.push(selectedApp)
+        }
+        localStorage.setItem('installed', JSON.stringify(updatelist))
+
+
+        !install && Swal.fire({ //
+            title: "Successfully Installed",
+            icon: "success",
+            draggable: true
+        });
+        setInstall(true)
     }
     return (
         <>
