@@ -11,9 +11,8 @@ const App = ({ app }) => {
     return (
 
         <>
-            <Container>
                 <Link to={`/apps/${id}`}>
-                    <div className="transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4 h-full bg-base-100 shadow-md mx-auto">
+                    <div className="h-full w-72 transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4  bg-base-100 shadow-md mx-auto">
                         <img
                             className='rounded-lg'
                             src={image}
@@ -27,7 +26,6 @@ const App = ({ app }) => {
                         </div>
                     </div>
                 </Link>
-            </Container>
         </>
     );
 };

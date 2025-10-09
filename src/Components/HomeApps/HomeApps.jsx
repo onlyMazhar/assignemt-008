@@ -16,7 +16,7 @@ const HomeApps = () => {
                         <h3 className='text-5xl font-bold'>Trending Apps</h3>
                         <p>Explore All Trending Apps on the Market developed by us</p>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2   xl:grid-cols-4 gap-8 p-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-2   xl:grid-cols-4 gap-8 '>
                         {
                             halfApps.map(app => <App key={app.id} app={app}></App>)
                         }

@@ -37,7 +37,7 @@ const Apps = () => {
                     {
                         foundApps.length === 0
                             ? <div className=' my-20  flex flex-col justify-center text-center text-2xl md:text-4xl xl:text-6xl font-bold text-gray-200 h-42'><p>No app Found</p></div>
-                            : <div className='grid grid-cols-1 md:grid-cols-2   xl:grid-cols-4 gap-8 p-8'>
+                            : <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  gap-6 mt-6 '>
                                 {
                                     foundApps.map(app => <SingleApp key={app.id} app={app} />)
                                 }
