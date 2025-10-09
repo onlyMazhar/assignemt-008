@@ -7,45 +7,38 @@ import rating from '../../assets/icon-ratings.png'
 import review from '../../assets/icon-review.png'
 import Swal from 'sweetalert2';
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import Spinner from '../../Components/Spinner/Spinner';
 
 
 const AppsDetailes = () => {
-    const [install, setInstall] = useState(false) // to toggle between installed/uninstall 
+    const [install, setInstall] = useState(false)
     const { apps, loading } = useApps() // custom hook
-    // console.log(apps)
     const { id } = useParams();
 
-    const selectedApp = apps.find(a => a.id === Number(id)) // getting single app data using app ID
-    if (loading) return (<p>Loading...</p>)
+    const selectedApp = apps.find(a => a.id === Number(id))
+    if (loading) return <Spinner />
     const { title, slogan, downloads, size, reviews, ratings, description, ratingAvg, image, companyName } = selectedApp;
 
-    // function to add data in locatlstorage 
     const handleInstall = () => {
-        // get added items from local storage and convert thme from string to normal data
         const addedtoLocal = JSON.parse(localStorage.getItem('installed'));
 
-        // as we will update all data in a array so updated list is declieared an empty array
         let updatelist = [];
 
         if (addedtoLocal) {
-            // check if app data alreday added in localStorage
             const isExist = addedtoLocal.some(a => a.id === selectedApp.id)
 
-            if (isExist) { // sweet aleart will return if app data exist
+            if (isExist) {
                 return Swal.fire({
                     icon: "error",
                     title: "Already Installed "
                 })
-            }// else app data will be added in updated liset
+            }
             else { updatelist = [...addedtoLocal, selectedApp] }
 
-        } else { // if no app dada exist set this as first app data
+        } else {
             updatelist.push(selectedApp)
         }
-
-        // add to local storage and convert to json string fro js array
         localStorage.setItem('installed', JSON.stringify(updatelist))
-
 
         !install && Swal.fire({ //
             title: "Successfully Installed",
@@ -57,7 +50,6 @@ const AppsDetailes = () => {
     return (
         <>
             <Container>
-
                 <div className="pb-1 border-b border-b-gray-300 flex flex-col gap-4 items-center md:flex-row xl:flex-row my-6 md:my-10 xl:my-10   mx-auto">
                     <figure>
                         <img
@@ -129,8 +121,3 @@ const AppsDetailes = () => {
 
 export default AppsDetailes;
 
-// const chartData = [
-//     {
-//         catagory:'donwloads'
-//     }
-// ]

@@ -11,38 +11,33 @@ import AppsDetailes from '../Pages/AppsDetailes/AppsDetailes';
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Root/>,
-        hydrateFallbackElement:<p>Loading...</p>,
-        errorElement: <Error/>,
+        element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 index: true,
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: '/apps',
-                element: <Apps/>
+                element: <Apps />
             },
             {
                 path: '/installation',
-                element: <Installation/>
+                element: <Installation />
             },
             {
-                path:'/apps/:id',
-                element:<AppsDetailes/>
-            },
-            {
-                path:'/apps/*',
-                element:<ErrorApp/>
-            },
-            {
-                path: '/',
-                element: <Error/>,
+                path: '/apps/:id',
+                element: <AppsDetailes />
             },
             {
                 path: '/apps/*',
-                element: ErrorApp
-            }
+                element: <ErrorApp />
+            },
+            {
+                path: '',
+                element: <Error />,
+            },
         ]
     }
 

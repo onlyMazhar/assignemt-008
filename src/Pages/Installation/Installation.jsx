@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Container from '../../Components/Container/Container';
 import { RxDownload } from 'react-icons/rx';
 import { TiStarFullOutline } from 'react-icons/ti';
+import { loadAppList } from '../../Utilities/loadAppList';
+import Spinner from '../../Components/Spinner/Spinner';
 
 const Installation = () => {
     const [sortDownload, setSortDownload] = useState('none')
-    const [applist, setApplist] = useState([])
+    const [applist, setApplist] = useState(() => loadAppList())
 
-    useEffect(() => {
-        const installedApps = JSON.parse(localStorage.getItem('installed'))
-        if (installedApps) setApplist(installedApps)
-    }, [])
+
 
     // console.log(applist)
     const handleSort = () => {
@@ -23,11 +22,11 @@ const Installation = () => {
         return sortedList;
     }
 
-    const handleRemove =(id)=>{
+    const handleRemove = (id) => {
         const addedToLS = JSON.parse(localStorage.getItem('installed'))
-        let updatedList = addedToLS.filter(a=> a.id !== id)
+        let updatedList = addedToLS.filter(a => a.id !== id)
         setApplist(updatedList)
-        localStorage.setItem('installed',JSON.stringify(updatedList))
+        localStorage.setItem('installed', JSON.stringify(updatedList))
     }
 
 
@@ -70,7 +69,7 @@ const Installation = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <button onClick={()=> handleRemove(a.id)} className="btn bg-green-400 text-white ">
+                                    <button onClick={() => handleRemove(a.id)} className="btn bg-green-400 text-white ">
                                         Uninstall
                                     </button>
                                 </div>

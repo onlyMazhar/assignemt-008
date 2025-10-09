@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Container from '../../Components/Container/Container';
 import SingleApp from './SingleApp/SingleApp';
 import useApps from '../../Hooks/useApps';
+import Spinner from '../../Components/Spinner/Spinner';
 
 const Apps = () => {
-    const { apps } = useApps();
+    const { apps, loading } = useApps();
     const [search, setSearch] = useState('');
     // console.log(search)
 
@@ -34,14 +35,16 @@ const Apps = () => {
                             </label>
                         </div>
                     </div>
+
                     {
-                        foundApps.length === 0
-                            ? <div className=' my-20  flex flex-col justify-center text-center text-2xl md:text-4xl xl:text-6xl font-bold text-gray-200 h-42'><p>No app Found</p></div>
-                            : <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  gap-6 mt-6 '>
-                                {
-                                    foundApps.map(app => <SingleApp key={app.id} app={app} />)
-                                }
-                            </div>
+                        loading ? <Spinner />
+                            : foundApps.length === 0
+                                ? <div className=' my-20  flex flex-col justify-center text-center text-2xl md:text-4xl xl:text-6xl font-bold text-gray-200 h-42'><p>No app Found</p></div>
+                                : <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  gap-6 mt-6 '>
+                                    {
+                                        foundApps.map(app => <SingleApp key={app.id} app={app} />)
+                                    }
+                                </div>
                     }
 
                 </div>
