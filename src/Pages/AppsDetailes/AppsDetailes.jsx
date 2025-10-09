@@ -6,17 +6,18 @@ import dwnImg from '../../assets/download.svg'
 import rating from '../../assets/icon-ratings.png'
 import review from '../../assets/icon-review.png'
 import Swal from 'sweetalert2';
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 
 const AppsDetailes = () => {
     const [install, setInstall] = useState(false) // to toggle between installed/uninstall 
-    const { apps, loading  } = useApps() // custom hook
+    const { apps, loading } = useApps() // custom hook
     // console.log(apps)
     const { id } = useParams();
 
     const selectedApp = apps.find(a => a.id === Number(id)) // getting single app data using app ID
     if (loading) return (<p>Loading...</p>)
-    const { title, slogan, downloads, size, reviews, description,   ratingAvg, image, companyName } = selectedApp;
+    const { title, slogan, downloads, size, reviews, ratings, description, ratingAvg, image, companyName } = selectedApp;
 
     // function to add data in locatlstorage 
     const handleInstall = () => {
@@ -45,7 +46,7 @@ const AppsDetailes = () => {
         // add to local storage and convert to json string fro js array
         localStorage.setItem('installed', JSON.stringify(updatelist))
 
-        
+
         !install && Swal.fire({ //
             title: "Successfully Installed",
             icon: "success",
@@ -57,7 +58,7 @@ const AppsDetailes = () => {
         <>
             <Container>
 
-                <div className="pb-1 border-b border-b-gray-300 flex flex-col gap-4 items-center md:flex-row xl:flex-row my-6 md:my-10 xl:my-10 md:w-10/12 xl:w-10/12 mx-auto">
+                <div className="pb-1 border-b border-b-gray-300 flex flex-col gap-4 items-center md:flex-row xl:flex-row my-6 md:my-10 xl:my-10   mx-auto">
                     <figure>
                         <img
                             className='w-72'
@@ -104,15 +105,32 @@ const AppsDetailes = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className='w-10/12 mx-auto py-10  text-justify leading-7 space-y-3'>
+                {/* Chart Data */}
+                <div  >
+                    <h3 className='text-2xl font-bold'>Ratings</h3>
+                    <div className='  h-96   rounded-xl '>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={ratings} layout="vertical" >
+                                <XAxis type="number" />
+                                <YAxis dataKey="name" type="category" width={80} tick={{ fill: '#627382', fontSize: 14 }} />
+                                <Bar dataKey="count" fill="#ff8811" radius={[0, 0, 0, 0]} barSize={40} />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
+                <div className='  mx-auto py-10  text-justify leading-7 space-y-3'>
                     <p className='font-bold text-lg'>Discription</p>
                     <p className='text-[#627382] '>{description}</p>
                 </div>
-
             </Container>
         </>
     );
 };
 
 export default AppsDetailes;
+
+// const chartData = [
+//     {
+//         catagory:'donwloads'
+//     }
+// ]
