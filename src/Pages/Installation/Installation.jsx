@@ -23,6 +23,13 @@ const Installation = () => {
         return sortedList;
     }
 
+    const handleRemove =(id)=>{
+        const addedToLS = JSON.parse(localStorage.getItem('installed'))
+        let updatedList = addedToLS.filter(a=> a.id !== id)
+        setApplist(updatedList)
+        localStorage.setItem('installed',JSON.stringify(updatedList))
+    }
+
 
 
 
@@ -63,8 +70,8 @@ const Installation = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <button className="btn bg-green-400 text-white ">
-                                        <span>Uninstall</span>
+                                    <button onClick={()=> handleRemove(a.id)} className="btn bg-green-400 text-white ">
+                                        Uninstall
                                     </button>
                                 </div>
                             </div>)
