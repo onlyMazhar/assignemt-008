@@ -5,11 +5,12 @@ import { TiStarFullOutline } from 'react-icons/ti';
 import { Link } from 'react-router';
 
 const SingleApp = ({ app }) => {
-    const { downloads, title, ratingAvg, image,slogan } = app;
+    
+    const { downloads, title, ratingAvg, image, slogan, id } = app;
     return (
         <>
             <Container>
-                <Link>
+                <Link to={`/apps/${id}`}>
                     <div className="transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4 h-full bg-base-100  shadow-md mx-auto">
                         <img
                             className='rounded-lg'

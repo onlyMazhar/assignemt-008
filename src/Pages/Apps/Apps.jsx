@@ -15,7 +15,7 @@ const Apps = () => {
         ? apps.filter(app => app.title.toLocaleLowerCase().includes(term))
         : apps
 
-    console.log(foundApps)
+    // console.log(foundApps)
     return (
         <div>
             <Container>
@@ -41,7 +41,7 @@ const Apps = () => {
                                 {
                                     foundApps.map(app => <SingleApp key={app.id} app={app} />)
                                 }
-                             </div>
+                            </div>
                     }
 
                 </div>
