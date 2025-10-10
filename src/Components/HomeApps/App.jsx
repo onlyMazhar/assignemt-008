@@ -14,7 +14,7 @@ const App = ({ app }) => {
                 <Link to={`/apps/${id}`}>
                     <div className="h-full transition delay-100 duration-350 easy-in-out hover:translate-y-0.5 hover:scale-110 flex flex-col justify-around rounded-xl p-4  bg-base-100 shadow-md mx-auto w-86">
                         <img
-                            className='rounded-lg'
+                            className='rounded-lg w-96'
                             src={image}
                             alt="Shoes" />
                         <div className="  px-0">

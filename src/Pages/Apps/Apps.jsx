@@ -20,14 +20,14 @@ const Apps = () => {
     return (
         <div>
             <Container>
-                <div className=' my-20 '>
-                    <div className='text-center  space-y-3'>
-                        <h3 className='text-5xl font-bold'>Our All Applications</h3>
-                        <p>Explore All Apps on the Market developed by us. We code for Millions</p>
+                <div className='my-10 md:my-20 '>
+                    <div className='text-center  space-y-4 mb-8 md:mb-12'>
+                        <h3 className='text-3xl md:text-5xl font-bold'>Our All Applications</h3>
+                        <p className='px-4'>Explore All Apps on the Market developed by us. We code for Millions</p>
                     </div>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex justify-between items-center px-4 '>
                         <div>
-                            <h3 className='text-2xl font-bold'>({foundApps.length}) Apps Found</h3>
+                            <h3 className='text-lg md:text-2xl font-bold'>({foundApps.length}) Apps Found</h3>
                         </div>
                         <div>
                             <label className="input bg-transparent">

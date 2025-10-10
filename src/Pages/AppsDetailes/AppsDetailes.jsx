@@ -8,6 +8,7 @@ import review from '../../assets/icon-review.png'
 import Swal from 'sweetalert2';
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import Spinner from '../../Components/Spinner/Spinner';
+import ErrorApp from '../../Components/ErrorApp/ErrorApp';
 
 
 const AppsDetailes = () => {
@@ -16,7 +17,9 @@ const AppsDetailes = () => {
     const { id } = useParams();
 
     const selectedApp = apps.find(a => a.id === Number(id))
-    if (loading) return <Spinner />
+    if (loading) return <Spinner />;
+    if (!selectedApp) return <ErrorApp />;
+
     const { title, slogan, downloads, size, reviews, ratings, description, ratingAvg, image, companyName } = selectedApp;
 
     const handleInstall = () => {
@@ -46,6 +49,7 @@ const AppsDetailes = () => {
             draggable: true
         });
         setInstall(true)
+
     }
     return (
         <>
@@ -86,8 +90,8 @@ const AppsDetailes = () => {
                             </div>
 
                         </div>
-                        <div className="card-actions">
-                            <button onClick={handleInstall} className="btn bg-green-400 text-white ">
+                        <div className="card-actions ">
+                            <button onClick={handleInstall} className="btn bg-green-400 text-white mx-auto md:ml-0">
                                 {
                                     install
                                         ? <span>Installed </span>
@@ -98,9 +102,9 @@ const AppsDetailes = () => {
                     </div>
                 </div>
                 {/* Chart Data */}
-                <div  >
+                <div className='px-4'>
                     <h3 className='text-2xl font-bold'>Ratings</h3>
-                    <div className='  h-96   rounded-xl '>
+                    <div className=' h-96   rounded-xl '>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={ratings} layout="vertical" >
                                 <XAxis type="number" />
@@ -110,7 +114,7 @@ const AppsDetailes = () => {
                         </ResponsiveContainer>
                     </div>
                 </div>
-                <div className='  mx-auto py-10  text-justify leading-7 space-y-3'>
+                <div className='  mx-auto py-10  text-justify leading-7 space-y-3 px-4'>
                     <p className='font-bold text-lg'>Discription</p>
                     <p className='text-[#627382] '>{description}</p>
                 </div>

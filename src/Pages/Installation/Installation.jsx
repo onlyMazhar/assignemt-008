@@ -35,13 +35,13 @@ const Installation = () => {
     return (
         <>
             <Container>
-                <div className='my-20'>
+                <div className='my-10 md:my-20'>
                     <div className='text-center space-y-4 mb-10'>
                         <h3 className='text-4xl font-bold'>Your Installed Apps</h3>
                         <p>Explore All Trending Apps on the Market developed by us</p>
                     </div>
                     <div>
-                        <div className='flex items-center justify-between'>
+                        <div className='flex items-center justify-around md:justify-between'>
                             <p> Apps Found ({applist.length})</p>
                             <label className='form-control max-w-xs'>
                                 <select className='btn btn-active' value={sortDownload} onChange={e => setSortDownload(e.target.value)}>
@@ -53,7 +53,7 @@ const Installation = () => {
                         </div>
 
                         {
-                            handleSort().map(a => <div className=" my-4 flex  justify-between p-4 items-center rounded-xl  bg-base-100 shadow-md mx-auto">
+                            handleSort().map(a => <div className="mx-4 my-4 flex  justify-between p-4 items-center rounded-xl  bg-base-100 shadow-md">
                                 <div className='flex gap-4 items-center'>
                                     <img
                                         className='rounded-lg w-24'

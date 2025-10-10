@@ -11,10 +11,10 @@ const HomeApps = () => {
     return (
         <>
             <Container>
-                <div className='text-center my-20'>
+                <div className='text-center my-10 md:my-20'>
                     <div className='text-center mb-10 space-y-4'>
                         <h3 className='text-5xl font-bold'>Trending Apps</h3>
-                        <p>Explore All Trending Apps on the Market developed by us</p>
+                        <p className='px-2'>Explore All Trending Apps on the Market developed by us</p>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 mb-10  xl:grid-cols-4 gap-8 '>
                         {
